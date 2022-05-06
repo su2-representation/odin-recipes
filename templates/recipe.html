@@ -4,9 +4,20 @@
     <img src={{recipe.img}} alt="{{recipe.title}}" width="250px"
         height="250px">
     <h3>Description</h3>
+    {% for d in recipe.description %}
+        <p>d</p>
+    {% endfor %}
     {{recipe.description}}
     <h3>Ingredients</h3>
-    {{recipe.ingredients}}
+    <ul>
+        {% for ing in recipe.ingredients %}
+            <li>{{ing}}</li>
+        {% endfor %}
+    </ul>
     <h3>Steps</h3>
-    {{recipe.steps}}
+    <ol>
+        {% for step in recipe.steps %}
+            <li>{{step}}</li>
+        {% endfor %}
+    </ol>
 {% endblock content %}
